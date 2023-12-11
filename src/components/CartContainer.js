@@ -1,10 +1,34 @@
 import CartItem from "./CartItem";
+import CartNavbar from "./CartNavbar";
 import { useSelector, useDispatch } from "react-redux";
-import { clearCart } from "../features/cart/cartSlice";
+import {
+  clearCart,
+  calculateTotals,
+  getCartItems,
+} from "../features/cart/cartSlice";
+import { useEffect } from "react";
 
 const CartContainer = () => {
+  const { cartItems, isLoading, total, amount } = useSelector(
+    (store) => store.cart
+  );
   const dispatch = useDispatch();
-  const { cartItems, total, amount } = useSelector((store) => store.cart);
+
+  useEffect(() => {
+    dispatch(calculateTotals());
+  }, [cartItems, dispatch]);
+
+  useEffect(() => {
+    dispatch(getCartItems());
+  }, [dispatch]);
+
+  if (isLoading) {
+    return (
+      <div className="loading">
+        <h1>Loading ...</h1>
+      </div>
+    );
+  }
 
   if (amount < 1) {
     return (
@@ -19,9 +43,7 @@ const CartContainer = () => {
 
   return (
     <section className="cart">
-      <header>
-        <h2>Your shopping cart</h2>
-      </header>
+      <CartNavbar />
       <div>
         {cartItems.map((item) => {
           return <CartItem key={item.id} {...item} />;

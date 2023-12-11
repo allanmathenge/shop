@@ -1,4 +1,4 @@
-import { ThumbsUp, ThumbsDown, TrashCan } from "../icons";
+import { ThumbsUp, ThumbsDown, TrashCan } from "../assets/icons";
 import { increase, decrease, removeItem } from "../features/cart/cartSlice";
 import { useDispatch } from "react-redux";
 
