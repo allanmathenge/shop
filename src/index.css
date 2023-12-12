@@ -249,6 +249,13 @@ nav a .logo {
     margin-top: 5rem;
   }
 
+  .price-date {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    padding-right: 20px;
+  }
+
   .nav-center {
     max-width: var(--fixed-width);
     width: 100%;

@@ -1,6 +1,7 @@
 import { ThumbsUp, AddCart, ThumbsDown } from "../assets/icons";
 import { addToCart, increase, decrease } from "../features/cart/cartSlice";
 import { useDispatch } from "react-redux";
+import TimeAgo from "../features/cart/TimeAgo";
 
 const CartItem = ({
   id,
@@ -10,6 +11,7 @@ const CartItem = ({
   category,
   image,
   rating,
+  date,
 }) => {
   const dispatch = useDispatch();
   return (
@@ -18,7 +20,10 @@ const CartItem = ({
 
       <div>
         <h4>{title}</h4>
-        <h4 className="item-price">${price}</h4>
+        <div className="price-date">
+          <h4 className="item-price">${price}</h4>
+          <TimeAgo timestamp={date} />
+        </div>
         <div className="inc-dec">
           <button
             className="amount-btn"

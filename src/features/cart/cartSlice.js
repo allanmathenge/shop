@@ -1,5 +1,6 @@
 import { createSlice, createAsyncThunk } from "@reduxjs/toolkit";
 import axios from "axios";
+import { sub } from "date-fns";
 
 const url = "https://fakestoreapi.com/products";
 
@@ -24,9 +25,8 @@ const cartSlice = createSlice({
   initialState,
   reducers: {
     clearCart: (state) => {
-      state.cartItems = [];
       state.count = 0;
-      state.amount = 0;
+      state.total = 0;
     },
 
     addToCart: (state, action) => {
@@ -42,14 +42,6 @@ const cartSlice = createSlice({
       }
       state.count++;
       state.total += item.price;
-    },
-
-    removeItem: (state, action) => {
-      const product = action.payload;
-      state.cartItems = state.cartItems.filter((item) => item.id !== product);
-      const countRemovedProducts = product.quantity;
-      state.count -= countRemovedProducts;
-      state.total -= countRemovedProducts * product.price;
     },
 
     increase: (state, { payload }) => {
@@ -71,6 +63,17 @@ const cartSlice = createSlice({
       .addCase(getCartItems.fulfilled, (state, action) => {
         state.isLoading = false;
         state.cartItems = action.payload;
+
+        //Adding offer expiry date
+        let min = 600;
+        const loadedCart = action.payload.map((product) => {
+          product.date = sub(new Date(), { minutes: min-- }).toISOString();
+
+          return product;
+        });
+
+        //Concatenating fetched products to the array
+        state.product = state.cartItems.concat(loadedCart);
       })
       .addCase(getCartItems.rejected, (state) => {
         state.isLoading = false;
@@ -78,7 +81,6 @@ const cartSlice = createSlice({
   },
 });
 
-export const { clearCart, addToCart, removeItem, increase, decrease } =
-  cartSlice.actions;
+export const { clearCart, addToCart, increase, decrease } = cartSlice.actions;
 
 export default cartSlice.reducer;
