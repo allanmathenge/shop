@@ -83,6 +83,12 @@ nav {
   left: 20px;
 }
 
+.hero {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
 .mobile {
   display: none;
 }
@@ -255,6 +261,7 @@ nav {
   ===============
   */
   .cart {
+    position: relative;
     min-height: calc(100vh - 120px);
     width: 90vw;
     margin: 0 auto;

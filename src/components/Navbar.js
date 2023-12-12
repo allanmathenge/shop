@@ -1,5 +1,6 @@
 import { Component } from "react";
 import logo from "../assets/logoipsum.svg";
+import Hero from "./Hero";
 
 class Navbar extends Component {
   state = { clicked: false };
@@ -15,6 +16,7 @@ class Navbar extends Component {
           <a href="/">
             <img src={logo} alt="logo" />
           </a>
+          <h3>Welcome to the leading online store</h3>
           <div>
             <ul
               id="navbar"
@@ -42,6 +44,7 @@ class Navbar extends Component {
             ></i>
           </div>
         </nav>
+        <Hero />
       </>
     );
   }

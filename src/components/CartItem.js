@@ -1,5 +1,5 @@
-import { ThumbsUp, ThumbsDown, TrashCan } from "../assets/icons";
-import { increase, decrease, removeItem } from "../features/cart/cartSlice";
+import { ThumbsUp, AddCart, ThumbsDown } from "../assets/icons";
+import { addToCart, increase, decrease } from "../features/cart/cartSlice";
 import { useDispatch } from "react-redux";
 
 const CartItem = ({
@@ -46,10 +46,10 @@ const CartItem = ({
       <button
         className="amount-btn"
         onClick={() => {
-          dispatch(removeItem(id));
+          dispatch(addToCart({ id }));
         }}
       >
-        <TrashCan />
+        <AddCart />
       </button>
       <hr />
     </article>

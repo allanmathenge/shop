@@ -1,11 +1,7 @@
 import CartItem from "./CartItem";
 import CartNavbar from "./CartNavbar";
 import { useSelector, useDispatch } from "react-redux";
-import {
-  clearCart,
-  calculateTotals,
-  getCartItems,
-} from "../features/cart/cartSlice";
+import { clearCart, getCartItems } from "../features/cart/cartSlice";
 import { useEffect } from "react";
 
 const CartContainer = () => {
@@ -13,10 +9,6 @@ const CartContainer = () => {
     (store) => store.cart
   );
   const dispatch = useDispatch();
-
-  useEffect(() => {
-    dispatch(calculateTotals());
-  }, [cartItems, dispatch]);
 
   useEffect(() => {
     dispatch(getCartItems());
