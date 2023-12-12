@@ -1,5 +1,5 @@
 import { Component } from "react";
-import logo from "../assets/logoipsum.svg";
+import { Logo } from "../assets/icons";
 import Hero from "./Hero";
 
 class Navbar extends Component {
@@ -14,7 +14,7 @@ class Navbar extends Component {
       <>
         <nav>
           <a href="/">
-            <img src={logo} alt="logo" />
+            <Logo className="logo" />
           </a>
           <h3>Welcome to the leading online store</h3>
           <div>

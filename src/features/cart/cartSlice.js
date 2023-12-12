@@ -1,5 +1,4 @@
 import { createSlice, createAsyncThunk } from "@reduxjs/toolkit";
-import { sub } from "date-fns";
 import axios from "axios";
 
 const url = "https://fakestoreapi.com/products";
