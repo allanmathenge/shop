@@ -93,6 +93,11 @@ nav a .logo {
   left: 20px;
 }
 
+.hero {
+  height: 72vh;
+  overflow: hidden;
+}
+
 .hero-desc {
   padding: 10px;
   width: 100vw;
@@ -330,6 +335,46 @@ nav a .logo {
     border-color: var(--clr-primary);
     color: var(--clr-primary);
   }
+
+  .loader {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .loading {
+    display: inline-block;
+    position: relative;
+    width: 80px;
+    height: 80px;
+  }
+  .loading:after {
+    content: " ";
+    display: block;
+    border-radius: 50%;
+    width: 0;
+    height: 0;
+    margin: 8px;
+    box-sizing: border-box;
+    border: 32px solid #fff;
+    border-color: #fff transparent #fff transparent;
+    animation: loading 1.2s infinite;
+  }
+  @keyframes loading {
+    0% {
+      transform: rotate(0);
+      animation-timing-function: cubic-bezier(0.55, 0.055, 0.675, 0.19);
+    }
+    50% {
+      transform: rotate(900deg);
+      animation-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
+    }
+    100% {
+      transform: rotate(1800deg);
+    }
+  }
+
+
   /*
   =============== 
   Cart Item
@@ -434,4 +479,25 @@ nav a .logo {
   .btn-container {
     display: flex;
     justify-content: space-around;
+  }
+
+  .footer {
+    width: 100vw;
+    height: 120px;
+    margin-bottom: 0vh;
+    background-color: lightcoral;
+  }
+
+  .footer-desc {
+    padding-top: 15px;
+    padding-bottom: 0px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .footer-desc p {
+    display: block;
+    text-align: center;
   }

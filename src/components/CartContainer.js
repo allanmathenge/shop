@@ -16,8 +16,8 @@ const CartContainer = () => {
 
   if (isLoading) {
     return (
-      <div className="loading">
-        <h1>Loading ...</h1>
+      <div className="loader">
+        <div className="loading"></div>
       </div>
     );
   }
