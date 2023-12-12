@@ -96,6 +96,10 @@ nav a .logo {
 .hero {
   height: 72vh;
   overflow: hidden;
+  background-image: url(./assets/set.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 .hero-desc {
@@ -481,11 +485,16 @@ nav a .logo {
     justify-content: space-around;
   }
 
+  .about {
+    width: 100%;
+    height: 85vh;
+  }
+
   .footer {
-    width: 100vw;
+    width: 100%;
     height: 120px;
     margin-bottom: 0vh;
-    background-color: lightcoral;
+    background-color: rgb(144, 131, 131);
   }
 
   .footer-desc {

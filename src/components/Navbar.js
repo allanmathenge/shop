@@ -1,5 +1,6 @@
 import { Component } from "react";
 import { Logo } from "../assets/icons";
+import { Link } from "react-router-dom";
 import Hero from "./Hero";
 
 class Navbar extends Component {
@@ -13,9 +14,9 @@ class Navbar extends Component {
     return (
       <>
         <nav>
-          <a href="/">
+          <Link to="/">
             <Logo className="logo" />
-          </a>
+          </Link>
           <h3>Welcome to the leading online store</h3>
           <div>
             <ul
@@ -23,18 +24,18 @@ class Navbar extends Component {
               className={this.state.clicked ? "#navbar active" : "#navbar"}
             >
               <li>
-                <a className="active" href="/">
+                <Link className="active" to="/">
                   Home
-                </a>
+                </Link>
               </li>
               <li>
-                <a href="/shop">Shop</a>
+                <Link to="/shop">Shop</Link>
               </li>
               <li>
-                <a href="/">About</a>
+                <Link to="/about">About</Link>
               </li>
               <li>
-                <a href="/">Contact</a>
+                <Link to="/contact">Contact</Link>
               </li>
             </ul>
           </div>
