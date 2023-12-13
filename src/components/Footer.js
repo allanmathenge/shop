@@ -9,7 +9,6 @@ const Footer = () => {
   return (
     <div className="footer">
       <div className="footer-desc">
-        <h4>All rights reserved</h4>
         <p className="socials">
           <a href="https://x.com/1mathenge?t=Cz2Q9lopNxAODz76obsvng&s=09">
             <TwitterX />
@@ -21,9 +20,9 @@ const Footer = () => {
             <Facebook />
           </a>
         </p>
-
-        <p>{date}</p>
-        <p>&copy;Allan Mathenge</p>
+        <h4>&copy;Allan Mathenge</h4>
+        <h4>{date}</h4>
+        <h4>All rights reserved</h4>
       </div>
     </div>
   );
