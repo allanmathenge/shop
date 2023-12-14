@@ -1,4 +1,4 @@
-import { AddCart } from "../assets/icons";
+import { AddCart } from "../../assets/icons";
 import { useSelector } from "react-redux";
 
 const Navbar = () => {

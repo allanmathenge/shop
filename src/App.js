@@ -1,10 +1,10 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import { useSelector } from "react-redux";
-import CartContainer from "./components/CartContainer";
+import CartContainer from "./features/cart/CartContainer";
 import Navbar from "./components/Navbar";
-import About from "./components/About";
-import Contact from "./components/Contact";
-import Modal from "./components/Modal";
+import About from "./features/cart/About";
+import Contact from "./features/cart/Contact";
+import Modal from "./features/modal/modalSlice";
 import Footer from "./components/Footer";
 
 function App() {

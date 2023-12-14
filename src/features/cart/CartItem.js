@@ -1,7 +1,7 @@
-import { ThumbsUp, AddCart, ThumbsDown } from "../assets/icons";
-import { addToCart, increase, decrease } from "../features/cart/cartSlice";
+import { ThumbsUp, AddCart, ThumbsDown } from "../../assets/icons";
+import { addToCart, increase, decrease } from "../cart/cartSlice";
 import { useDispatch } from "react-redux";
-import TimeAgo from "../features/cart/TimeAgo";
+import TimeAgo from "../cart/TimeAgo";
 
 const CartItem = ({
   id,

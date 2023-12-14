@@ -1,7 +1,7 @@
 import { Component } from "react";
 import { Logo } from "../assets/icons";
 import { Link } from "react-router-dom";
-import Hero from "./Hero";
+import Hero from "../features/cart/Hero";
 
 class Navbar extends Component {
   state = { clicked: false };

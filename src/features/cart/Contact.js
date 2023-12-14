@@ -1,6 +1,6 @@
 import { useState, useRef } from "react";
 import emailjs from "@emailjs/browser";
-import { WhatsApp } from "../assets/icons";
+import { WhatsApp } from "../../assets/icons";
 
 const Contact = () => {
   const formRef = useRef();

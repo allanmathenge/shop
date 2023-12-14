@@ -1,8 +1,8 @@
 import CartItem from "./CartItem";
 import CartNavbar from "./CartNavbar";
 import { useSelector, useDispatch } from "react-redux";
-import { getCartItems } from "../features/cart/cartSlice";
-import { openModal } from "../features/modal/modalSlice";
+import { getCartItems } from "./cartSlice";
+import { openModal } from "../modal/modalSlice";
 import { useEffect } from "react";
 
 const CartContainer = () => {
