@@ -8,7 +8,7 @@ const Navbar = () => {
     <div>
       <nav>
         <div className="nav-center">
-          <h3>Welcome. Discover your style!</h3>
+          <h3>Discover your style!</h3>
           <div className="nav-container">
             <AddCart />
             <div className="amount-container">

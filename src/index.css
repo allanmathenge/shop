@@ -1,4 +1,3 @@
-
 /*
 =============== 
 Variables
@@ -137,6 +136,7 @@ nav a .logo {
     align-items: flex-start;
     justify-content: flex-start;
     position: fixed;
+    z-index: 999;
     top: 105px;
     right: -300px;
     width: 300px;

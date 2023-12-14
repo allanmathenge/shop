@@ -1,7 +1,6 @@
 import { Component } from "react";
 import { Logo } from "../assets/icons";
 import { Link } from "react-router-dom";
-import Hero from "../features/cart/Hero";
 
 class Navbar extends Component {
   state = { clicked: false };
@@ -32,10 +31,10 @@ class Navbar extends Component {
                 <Link to="/shop">Shop</Link>
               </li>
               <li>
-                <Link to="/about">About Us</Link>
+                <Link to="/shop/about">About Us</Link>
               </li>
               <li>
-                <Link to="/contact">Contact</Link>
+                <Link to="/shop/contact">Contact</Link>
               </li>
             </ul>
           </div>
@@ -45,7 +44,6 @@ class Navbar extends Component {
             ></i>
           </div>
         </nav>
-        <Hero />
       </>
     );
   }
