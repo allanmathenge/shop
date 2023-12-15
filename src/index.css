@@ -21,6 +21,7 @@ Variables
     --small-screen-width: 90vw;
     --fixed-width: 50rem;
     --bg-color:linear-gradient(to right, #2f48ba, #8d1f44);
+    --rvsbg-color:linear-gradient(to right, #8d1f44, #2f48ba);
   }
 
   * {
@@ -42,7 +43,7 @@ nav {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  background: var(--bg-color);
+  background: var(--rvsbg-color);
   padding: 10px 40px;
   height: 105px;
   text-align: center;
@@ -395,8 +396,9 @@ nav a .logo {
     display: grid;
     align-items: center;
     grid-template-columns: auto 1fr auto;
-    grid-column-gap: 1.5rem;
-    margin: 1.5rem 0;
+    grid-column-gap: 2rem;
+    margin: 3rem 0;
+    border-bottom: 1px solid var(--clr-grey-10);
   }
   .cart-item img {
     width: 5rem;
@@ -451,11 +453,6 @@ nav a .logo {
     margin-bottom: 0;
     font-size: 1.25rem;
     line-height: 1;
-  }
-  hr {
-    background: var(--clr-grey-5);
-    border-color: transparent;
-    border-width: 0.25px;
   }
   
   .modal-container {
@@ -606,4 +603,17 @@ textarea:focus, input:focus{
   .socials {
     display: flex;
     gap: 10px;
+  }
+
+  .page {
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100vh;
+    gap: 10px;
+  }
+
+  .page img {
+    max-width: 400px;
   }

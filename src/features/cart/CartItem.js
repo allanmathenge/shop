@@ -2,6 +2,7 @@ import { ThumbsUp, AddCart, ThumbsDown } from "../../assets/icons";
 import { addToCart, increase, decrease } from "../cart/cartSlice";
 import { useDispatch } from "react-redux";
 import TimeAgo from "../cart/TimeAgo";
+import { Link } from "react-router-dom";
 
 const CartItem = ({
   id,
@@ -19,7 +20,9 @@ const CartItem = ({
       <img src={image} alt={title} />
 
       <div>
-        <h4>{title}</h4>
+        <Link to={`${id}`}>
+          <h4>{title}</h4>
+        </Link>
         <div className="price-date">
           <h4 className="item-price">${price}</h4>
           <TimeAgo timestamp={date} />
