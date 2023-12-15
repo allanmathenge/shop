@@ -69,7 +69,6 @@ const CartItem = ({
       >
         <AddCart />
       </button>
-      <hr />
     </article>
   );
 };
