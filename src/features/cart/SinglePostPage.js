@@ -27,7 +27,7 @@ const SinglePostPage = () => {
     <article className="page">
       <CartNavbar />
       <h3>{item.title}</h3>
-      <img src={item.image} width="100px" alt={item.title} />
+      <img src={item.image} alt={item.title} />
       <h4>${item.price}</h4>
       <div className="page-shop">
         <h4>

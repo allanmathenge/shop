@@ -4,25 +4,14 @@ import { useDispatch } from "react-redux";
 import TimeAgo from "../cart/TimeAgo";
 import { Link } from "react-router-dom";
 
-const CartItem = ({
-  id,
-  title,
-  price,
-  description,
-  category,
-  image,
-  rating,
-  date,
-}) => {
+const CartItem = ({ id, title, price, description, category, image, date }) => {
   const dispatch = useDispatch();
   return (
     <article className="cart-item">
       <img src={image} alt={title} />
 
       <div>
-        <Link to={`${id}`}>
-          <h4>{title}</h4>
-        </Link>
+        <h4>{title}</h4>
         <div className="price-date">
           <h4 className="item-price">${price}</h4>
           <TimeAgo timestamp={date} />
@@ -37,7 +26,6 @@ const CartItem = ({
             Like
             <ThumbsUp />
           </button>
-          <p className="amount-rate">{rating.count}</p>
           <button
             className="amount-btn"
             onClick={() => {
@@ -47,7 +35,19 @@ const CartItem = ({
             Dislike
             <ThumbsDown />
           </button>
-          <p className="rate">Rate {rating.rate}</p>
+          <Link to={`${id}`}>
+            <h4
+              style={{
+                color: "maroon",
+                border: "1px solid lightblue",
+                padding: "4px",
+                marginLeft: "15px",
+                boxShadow: "0 1px 10px rgba(0, 0, 0, 0.08)",
+              }}
+            >
+              View item
+            </h4>
+          </Link>
         </div>
       </div>
 
