@@ -396,18 +396,20 @@ nav a .logo {
     display: grid;
     align-items: center;
     grid-template-columns: auto 0.8fr auto;
-    grid-column-gap: 1rem;
+    grid-column-gap: 0.1rem;
     margin: 3rem 0;
-    padding: 10px;
     height: fit-content;
+    padding: 10px 0;
     background-color: var(--clr-grey-10);
-    border-radius: 10px;
+    border-radius: 15px;
     box-shadow: 0 40px 60px rgba(0, 0, 0, 0.1);
     border: 1px solid var(--clr-grey-10);
   }
   .cart-item img {
     width: 7rem;
     height: 7rem;
+    margin-left: 2px;
+    border-radius: 10px;
     object-fit: cover;
   }
   .cart-item h4 {
@@ -417,10 +419,6 @@ nav a .logo {
   }
   .item-price {
     color: var(--clr-grey-5);
-  }
-  
-  .remove-btn:hover {
-    color: var(--clr-primary-light);
   }
 
   .inc-dec {

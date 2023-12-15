@@ -4,7 +4,16 @@ import { useDispatch } from "react-redux";
 import TimeAgo from "../cart/TimeAgo";
 import { Link } from "react-router-dom";
 
-const CartItem = ({ id, title, price, description, category, image, date }) => {
+const CartItem = ({
+  id,
+  title,
+  price,
+  description,
+  category,
+  image,
+  rating,
+  date,
+}) => {
   const dispatch = useDispatch();
   return (
     <article className="cart-item">
@@ -26,6 +35,7 @@ const CartItem = ({ id, title, price, description, category, image, date }) => {
             Like
             <ThumbsUp />
           </button>
+          <p className="amount-rate">{rating.count}</p>
           <button
             className="amount-btn"
             onClick={() => {
