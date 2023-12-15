@@ -12,8 +12,8 @@ const SinglePostPage = ({ price }) => {
   //Retrieving itemId from url
 
   const dispatch = useDispatch();
-  const { id } = useParams();
-  const product = useSelector((state) => selectItemById(state, Number(id)));
+  const { id: pId } = useParams();
+  const product = useSelector((state) => selectItemById(state, parseInt(pId)));
 
   if (!product) {
     return (
@@ -36,7 +36,7 @@ const SinglePostPage = ({ price }) => {
         <button
           className="amount-btn"
           onClick={() => {
-            dispatch(addToCart({ id }));
+            dispatch(addToCart({ pId }));
           }}
         >
           <AddCart />

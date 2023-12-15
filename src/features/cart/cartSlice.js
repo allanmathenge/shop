@@ -31,7 +31,9 @@ const cartSlice = createSlice({
 
     addToCart: (state, action) => {
       const product = action.payload;
+      console.log(product);
       const item = state.cartItems.find((p) => p.id === product.id);
+
       if (!item) {
         state.cartItems.push({
           ...product,
