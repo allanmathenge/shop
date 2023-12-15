@@ -49,13 +49,13 @@ const CartItem = ({
             <h4
               style={{
                 color: "maroon",
-                border: "1px solid lightblue",
+                border: "1px solid #ddeeee",
                 padding: "4px",
-                marginLeft: "15px",
+                marginLeft: "5px",
                 boxShadow: "0 1px 10px rgba(0, 0, 0, 0.08)",
               }}
             >
-              View item
+              View
             </h4>
           </Link>
         </div>

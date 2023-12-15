@@ -583,9 +583,10 @@ textarea:focus, input:focus{
   }
 
   .footer {
+    position: absolute;
     width: 100%;
     height: fit-content;
-    background-color: rgb(144, 131, 131);
+    background-color: var(--clr-grey-10);
     margin-bottom: 0;
   }
 
@@ -610,7 +611,7 @@ textarea:focus, input:focus{
   }
 
   .page {
-    margin-top: 20px;
+    margin: 20px 0;
     display: flex;
     flex-direction: column;
     align-items: center;

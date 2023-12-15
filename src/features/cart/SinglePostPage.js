@@ -8,14 +8,14 @@ import CartNavbar from "./CartNavbar";
 
 import { useParams } from "react-router-dom";
 
-const SinglePostPage = () => {
+const SinglePostPage = ({ price }) => {
   //Retrieving itemId from url
 
   const dispatch = useDispatch();
   const { id } = useParams();
-  const item = useSelector((state) => selectItemById(state, parseInt(id)));
+  const product = useSelector((state) => selectItemById(state, Number(id)));
 
-  if (!item) {
+  if (!product) {
     return (
       <section>
         <h2>Item Not Found!</h2>
@@ -26,12 +26,12 @@ const SinglePostPage = () => {
   return (
     <article className="page">
       <CartNavbar />
-      <h3>{item.title}</h3>
-      <img src={item.image} alt={item.title} />
-      <h4>${item.price}</h4>
+      <h3>{product.title}</h3>
+      <img src={product.image} alt={product.title} />
+      <h4>${product.price}</h4>
       <div className="page-shop">
         <h4>
-          <TimeAgo timestamp={item.date} />
+          <TimeAgo timestamp={product.date} />
         </h4>
         <button
           className="amount-btn"
