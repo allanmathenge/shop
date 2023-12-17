@@ -1,17 +1,11 @@
 import CartItem from "./CartItem";
 import CartNavbar from "./CartNavbar";
 import { useSelector, useDispatch } from "react-redux";
-import { getCartItems } from "./cartSlice";
 import { openModal } from "../modal/modalSlice";
-import { useEffect } from "react";
 
 const CartContainer = () => {
   const { cartItems, isLoading, total } = useSelector((store) => store.cart);
   const dispatch = useDispatch();
-
-  useEffect(() => {
-    dispatch(getCartItems());
-  }, [dispatch]);
 
   if (isLoading) {
     return (
