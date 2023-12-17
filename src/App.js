@@ -5,6 +5,7 @@ import SinglePostPage from "./features/cart/SinglePostPage";
 import About from "./features/cart/About";
 import Contact from "./features/cart/Contact";
 import Hero from "./features/cart/Hero";
+import { Navigate } from "react-router-dom";
 
 function App() {
   //Modal was deleted here
@@ -18,6 +19,8 @@ function App() {
           <Route path="contact" element={<Contact />} />
           <Route path=":id" element={<SinglePostPage />} />
         </Route>
+        {/* Catch all will be repaced with 404 */}
+        <Route path="*" element={<Navigate to="/" />} />
       </Route>
     </Routes>
   );
