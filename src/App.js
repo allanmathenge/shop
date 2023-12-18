@@ -20,7 +20,7 @@ function App() {
           <Route path=":id" element={<SinglePostPage />} />
         </Route>
         {/* Catch all will be repaced with 404 */}
-        <Route path="*" element={<Navigate to="/" />} />
+        <Route path="*" element={<Navigate to="/" replace />} />
       </Route>
     </Routes>
   );
